@@ -402,6 +402,10 @@ export const homeContent = {
         tags: ["Marca própria", "Posicionamento", "Diagnóstico", "Crescimento digital"],
         isPublic: true,
         href: "https://focarforadacaixa.com.br/",
+        preview: {
+          src: "/projects/focar-preview.png",
+          alt: "Preview do site da Focar Fora da Caixa",
+        },
       },
     ] as readonly ProjectCase[],
     readinessTitle: "O que a Modo procura mostrar em cada projeto",
