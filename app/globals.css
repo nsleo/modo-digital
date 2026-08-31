@@ -2398,16 +2398,41 @@
     isolation: isolate;
   }
 
-  .project-preview-showcase__desktop-shell {
+  .project-preview-showcase__device {
     position: relative;
-    width: min(100%, 34rem);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 1.35rem;
     background: rgba(8, 13, 24, 0.92);
     box-shadow:
       0 30px 80px rgba(0, 0, 0, 0.45),
       inset 0 1px 0 rgba(255, 255, 255, 0.08);
     overflow: hidden;
+  }
+
+  .project-preview-showcase__device--desktop {
+    z-index: 1;
+    width: min(92%, 34rem);
+    border-radius: 1.35rem;
+  }
+
+  .project-preview-showcase__device--tablet,
+  .project-preview-showcase__device--mobile {
+    position: absolute;
+    z-index: 2;
+    bottom: 0.85rem;
+    padding: 0.35rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(180deg, rgba(9, 13, 22, 0.98), rgba(3, 5, 11, 0.98));
+  }
+
+  .project-preview-showcase__device--tablet {
+    right: 0.9rem;
+    width: clamp(6rem, 27%, 9rem);
+  }
+
+  .project-preview-showcase__device--mobile {
+    left: 0.9rem;
+    width: clamp(4rem, 17%, 5.5rem);
+    border-radius: 1.1rem;
   }
 
   .project-preview-showcase__browser-bar {
@@ -2434,15 +2459,35 @@
     background: rgba(171, 185, 205, 0.08);
   }
 
-  .project-preview-showcase__desktop-frame {
+  .project-preview-showcase__frame {
     --preview-scroll-distance: 0px;
     position: relative;
     overflow: hidden;
   }
 
-  .project-preview-showcase__desktop-frame {
+  .project-preview-showcase__device--desktop .project-preview-showcase__frame {
     aspect-ratio: 16 / 10;
     background: #0a0f18;
+  }
+
+  .project-preview-showcase__device--tablet .project-preview-showcase__frame {
+    aspect-ratio: 4 / 5.3;
+    border-radius: 0.9rem;
+    background: #0a0f18;
+  }
+
+  .project-preview-showcase__device--mobile .project-preview-showcase__frame {
+    aspect-ratio: 9 / 19.5;
+    border-radius: 0.75rem;
+    background: #0a0f18;
+  }
+
+  .project-preview-showcase__device-notch {
+    width: 35%;
+    height: 0.25rem;
+    margin: 0.15rem auto 0.35rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.13);
   }
 
   .project-preview-showcase__image {
@@ -2467,12 +2512,27 @@
     will-change: transform;
   }
 
-  .project-preview-showcase__desktop-frame.is-full-ready .project-preview-showcase__image--poster {
+  .project-preview-showcase__frame.is-full-ready .project-preview-showcase__image--poster {
     opacity: 0;
   }
 
-  .project-preview-showcase__desktop-frame.is-full-ready .project-preview-showcase__image--full {
+  .project-preview-showcase__frame.is-full-ready .project-preview-showcase__image--full {
     opacity: 1;
+  }
+
+  .project-preview-showcase__loading {
+    position: absolute;
+    right: 0.6rem;
+    bottom: 0.6rem;
+    padding: 0.3rem 0.45rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-pill);
+    background: rgba(5, 9, 16, 0.72);
+    color: rgba(235, 241, 248, 0.78);
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 0.42rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   @keyframes project-preview-pan {
@@ -4311,6 +4371,14 @@
       padding: 1rem 1rem 0.8rem;
     }
 
+    .project-preview-showcase__device--tablet {
+      right: 0.7rem;
+    }
+
+    .project-preview-showcase__device--mobile {
+      left: 0.7rem;
+    }
+
     .projects-preview__copy {
       padding: 1rem;
     }
@@ -4605,8 +4673,16 @@
       min-height: 18rem;
     }
 
-    .project-preview-showcase__desktop-shell {
+    .project-preview-showcase__device--desktop {
       width: 100%;
+    }
+
+    .project-preview-showcase__device--tablet {
+      width: 28%;
+    }
+
+    .project-preview-showcase__device--mobile {
+      width: 18%;
     }
 
     .browser-content {

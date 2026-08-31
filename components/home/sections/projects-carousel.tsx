@@ -87,8 +87,10 @@ export function ProjectsCarousel({ items }: ProjectsCarouselProps) {
                   <div className="projects-case-card__media">
                     {item.preview ? (
                       <ProjectPreviewShowcase
-                        poster={item.preview.poster}
-                        full={item.preview.full}
+                        desktop={item.preview.desktop}
+                        tablet={item.preview.tablet}
+                        mobile={item.preview.mobile}
+                        isActive={pageIndex === activePage}
                         title={item.title}
                       />
                     ) : (

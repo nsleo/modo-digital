@@ -42,14 +42,20 @@ export type ProjectCase = {
   isPublic: boolean;
   href: string;
   preview?: {
-    poster: {
-      src: string;
-      alt: string;
-    };
-    full?: {
-      src: string;
-      alt: string;
-    };
+    desktop: ProjectPreviewDevice;
+    tablet: ProjectPreviewDevice;
+    mobile: ProjectPreviewDevice;
+  };
+};
+
+export type ProjectPreviewDevice = {
+  hero: {
+    src: string;
+    alt: string;
+  };
+  full: {
+    src: string;
+    alt: string;
   };
 };
 
@@ -345,14 +351,9 @@ export const homeContent = {
         isPublic: true,
         href: "https://rmindutores.com.br/",
         preview: {
-          poster: {
-            src: "/projects/case-captures/rm-indutores-hero.png",
-            alt: "Página inicial do site da RM Indutores",
-          },
-          full: {
-            src: "/projects/case-captures/rm-indutores-full.png",
-            alt: "Página completa do site da RM Indutores",
-          },
+          desktop: { hero: { src: "/projects/case-captures/responsive/rm-indutores-desktop-hero.webp", alt: "Página inicial desktop da RM Indutores" }, full: { src: "/projects/case-captures/responsive/rm-indutores-desktop-full.webp", alt: "Página completa desktop da RM Indutores" } },
+          tablet: { hero: { src: "/projects/case-captures/responsive/rm-indutores-tablet-hero.webp", alt: "Página inicial tablet da RM Indutores" }, full: { src: "/projects/case-captures/responsive/rm-indutores-tablet-full.webp", alt: "Página completa tablet da RM Indutores" } },
+          mobile: { hero: { src: "/projects/case-captures/responsive/rm-indutores-mobile-hero.webp", alt: "Página inicial mobile da RM Indutores" }, full: { src: "/projects/case-captures/responsive/rm-indutores-mobile-full.webp", alt: "Página completa mobile da RM Indutores" } },
         },
       },
       {
@@ -367,10 +368,9 @@ export const homeContent = {
         isPublic: true,
         href: "https://metalside.com.br/",
         preview: {
-          poster: {
-            src: "/projects/case-captures/metalside-hero.png",
-            alt: "Página inicial do site da Metalside",
-          },
+          desktop: { hero: { src: "/projects/case-captures/responsive/metalside-desktop-hero.webp", alt: "Página inicial desktop da Metalside" }, full: { src: "/projects/case-captures/responsive/metalside-desktop-full.webp", alt: "Página completa desktop da Metalside" } },
+          tablet: { hero: { src: "/projects/case-captures/responsive/metalside-tablet-hero.webp", alt: "Página inicial tablet da Metalside" }, full: { src: "/projects/case-captures/responsive/metalside-tablet-full.webp", alt: "Página completa tablet da Metalside" } },
+          mobile: { hero: { src: "/projects/case-captures/responsive/metalside-mobile-hero.webp", alt: "Página inicial mobile da Metalside" }, full: { src: "/projects/case-captures/responsive/metalside-mobile-full.webp", alt: "Página completa mobile da Metalside" } },
         },
       },
       {
@@ -385,10 +385,9 @@ export const homeContent = {
         isPublic: true,
         href: "https://www.nsserv.net.br/",
         preview: {
-          poster: {
-            src: "/projects/case-captures/ns-servicos-hero.png",
-            alt: "Página inicial do site da NS Serviços",
-          },
+          desktop: { hero: { src: "/projects/case-captures/responsive/ns-servicos-desktop-hero.webp", alt: "Página inicial desktop da NS Serviços" }, full: { src: "/projects/case-captures/responsive/ns-servicos-desktop-full.webp", alt: "Página completa desktop da NS Serviços" } },
+          tablet: { hero: { src: "/projects/case-captures/responsive/ns-servicos-tablet-hero.webp", alt: "Página inicial tablet da NS Serviços" }, full: { src: "/projects/case-captures/responsive/ns-servicos-tablet-full.webp", alt: "Página completa tablet da NS Serviços" } },
+          mobile: { hero: { src: "/projects/case-captures/responsive/ns-servicos-mobile-hero.webp", alt: "Página inicial mobile da NS Serviços" }, full: { src: "/projects/case-captures/responsive/ns-servicos-mobile-full.webp", alt: "Página completa mobile da NS Serviços" } },
         },
       },
       {
@@ -403,14 +402,9 @@ export const homeContent = {
         isPublic: true,
         href: "https://axisky.com.br/",
         preview: {
-          poster: {
-            src: "/projects/case-captures/axisky-hero.png",
-            alt: "Página inicial do site da Axisky Engenharia",
-          },
-          full: {
-            src: "/projects/case-captures/axisky-full.png",
-            alt: "Página completa do site da Axisky Engenharia",
-          },
+          desktop: { hero: { src: "/projects/case-captures/responsive/axisky-desktop-hero.webp", alt: "Página inicial desktop da Axisky Engenharia" }, full: { src: "/projects/case-captures/responsive/axisky-desktop-full.webp", alt: "Página completa desktop da Axisky Engenharia" } },
+          tablet: { hero: { src: "/projects/case-captures/responsive/axisky-tablet-hero.webp", alt: "Página inicial tablet da Axisky Engenharia" }, full: { src: "/projects/case-captures/responsive/axisky-tablet-full.webp", alt: "Página completa tablet da Axisky Engenharia" } },
+          mobile: { hero: { src: "/projects/case-captures/responsive/axisky-mobile-hero.webp", alt: "Página inicial mobile da Axisky Engenharia" }, full: { src: "/projects/case-captures/responsive/axisky-mobile-full.webp", alt: "Página completa mobile da Axisky Engenharia" } },
         },
       },
       {
@@ -425,14 +419,9 @@ export const homeContent = {
         isPublic: true,
         href: "https://focarforadacaixa.com.br/",
         preview: {
-          poster: {
-            src: "/projects/case-captures/focar-hero.png",
-            alt: "Página inicial do site da Focar Fora da Caixa",
-          },
-          full: {
-            src: "/projects/case-captures/focar-full.png",
-            alt: "Página completa do site da Focar Fora da Caixa",
-          },
+          desktop: { hero: { src: "/projects/case-captures/responsive/focar-desktop-hero.webp", alt: "Página inicial desktop da Focar" }, full: { src: "/projects/case-captures/responsive/focar-desktop-full.webp", alt: "Página completa desktop da Focar" } },
+          tablet: { hero: { src: "/projects/case-captures/responsive/focar-tablet-hero.webp", alt: "Página inicial tablet da Focar" }, full: { src: "/projects/case-captures/responsive/focar-tablet-full.webp", alt: "Página completa tablet da Focar" } },
+          mobile: { hero: { src: "/projects/case-captures/responsive/focar-mobile-hero.webp", alt: "Página inicial mobile da Focar" }, full: { src: "/projects/case-captures/responsive/focar-mobile-full.webp", alt: "Página completa mobile da Focar" } },
         },
       },
     ] as readonly ProjectCase[],
