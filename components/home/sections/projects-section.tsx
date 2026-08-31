@@ -1,16 +1,20 @@
 import { Badge } from "@/components/ui/badge";
-import { Icon } from "@/components/ui/icon";
-import { ProjectPreviewShowcase } from "@/components/home/sections/project-preview-showcase";
+import { ProjectsCarousel } from "@/components/home/sections/projects-carousel";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionShell } from "@/components/ui/section-shell";
 import { homeContent } from "@/content/site";
 
 export function ProjectsSection() {
-  const hasPublicCases = homeContent.projects.examples.some((item) => item.isPublic);
+  const publicCases = homeContent.projects.examples.filter((item) => item.isPublic);
+  const hasPublicCases = publicCases.length > 0;
 
   return (
-    <SectionShell className="section projects-section" id="projetos">
+    <SectionShell
+      className="section projects-section"
+      id="projetos"
+      containerClassName="container container--ultra"
+    >
       <Reveal>
         <div className="projects-heading">
           <SectionHeading
@@ -29,41 +33,7 @@ export function ProjectsSection() {
       </Reveal>
 
       {hasPublicCases ? (
-        <div className="projects-case-grid">
-          {homeContent.projects.examples.filter((item) => item.isPublic).map((item, index) => (
-            <Reveal delay={index * 0.05} key={item.slug}>
-              <article className="projects-case-card">
-                <div className="projects-case-card__media">
-                  {item.preview ? (
-                    <ProjectPreviewShowcase
-                      desktop={item.preview.desktop}
-                      mobile={item.preview.mobile}
-                      title={item.title}
-                    />
-                  ) : (
-                    <div className="projects-case-card__fallback" aria-hidden="true">
-                      <span>{item.category}</span>
-                      <strong>{item.title}</strong>
-                    </div>
-                  )}
-                </div>
-                <span className="micro-label">{item.category}</span>
-                <h3>{item.title}</h3>
-                <p>{item.summary}</p>
-                <strong>{item.impact}</strong>
-                <div className="projects-case-card__tags">
-                  {item.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-                <a className="projects-case-card__link" href={item.href} target="_blank" rel="noreferrer">
-                  Ver site publicado
-                  <Icon name="arrow" width={16} height={16} />
-                </a>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+        <ProjectsCarousel items={publicCases} />
       ) : (
         <Reveal>
           <div className="projects-preview" aria-label="Estrutura futura dos cases">

@@ -2268,15 +2268,81 @@
     text-transform: uppercase;
   }
 
-  .projects-case-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.25rem;
+  .projects-carousel {
     margin-top: 4rem;
   }
 
-  .projects-case-grid > div {
-    height: 100%;
+  .projects-carousel__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .projects-carousel__status {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .projects-carousel__status p {
+    color: var(--text-secondary);
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .projects-carousel__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .projects-carousel__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #dbe5f1;
+    transition:
+      border-color var(--duration-fast) var(--ease-out),
+      background-color var(--duration-fast) var(--ease-out),
+      transform var(--duration-fast) var(--ease-out);
+  }
+
+  .projects-carousel__button:hover {
+    border-color: rgba(24, 200, 255, 0.2);
+    background: rgba(24, 200, 255, 0.08);
+    transform: translateY(-1px);
+  }
+
+  .projects-carousel__button-icon.is-reversed {
+    transform: rotate(180deg);
+  }
+
+  .projects-carousel__viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .projects-carousel__track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .projects-carousel__page {
+    display: grid;
+    flex: 0 0 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
   }
 
   .projects-case-card {
@@ -2329,6 +2395,7 @@
     justify-content: center;
     height: 100%;
     padding: 1.4rem 1.25rem 1rem;
+    isolation: isolate;
   }
 
   .project-preview-showcase__desktop-shell {
@@ -4252,7 +4319,7 @@
       grid-template-columns: 1fr;
     }
 
-    .projects-case-grid {
+    .projects-carousel__page {
       grid-template-columns: 1fr;
     }
 
@@ -4549,6 +4616,11 @@
 
     .projects-case-card {
       min-height: 32rem;
+    }
+
+    .projects-carousel__controls {
+      align-items: flex-start;
+      flex-direction: column;
     }
 
     .projects-case-card__media {
