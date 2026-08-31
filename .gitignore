@@ -14,8 +14,10 @@
 .DS_Store
 *.pem
 *.rtf
+*.pyc
 .playwright-mcp/
 tmp/
+__pycache__/
 
 # debug
 npm-debug.log*
