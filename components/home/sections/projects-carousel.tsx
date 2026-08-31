@@ -87,8 +87,8 @@ export function ProjectsCarousel({ items }: ProjectsCarouselProps) {
                   <div className="projects-case-card__media">
                     {item.preview ? (
                       <ProjectPreviewShowcase
-                        desktop={item.preview.desktop}
-                        mobile={item.preview.mobile}
+                        poster={item.preview.poster}
+                        full={item.preview.full}
                         title={item.title}
                       />
                     ) : (

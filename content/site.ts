@@ -42,11 +42,11 @@ export type ProjectCase = {
   isPublic: boolean;
   href: string;
   preview?: {
-    desktop: {
+    poster: {
       src: string;
       alt: string;
     };
-    mobile?: {
+    full?: {
       src: string;
       alt: string;
     };
@@ -345,13 +345,13 @@ export const homeContent = {
         isPublic: true,
         href: "https://rmindutores.com.br/",
         preview: {
-          desktop: {
-            src: "/projects/rm-indutores-desktop.png",
-            alt: "Preview desktop do site da RM Indutores",
+          poster: {
+            src: "/projects/case-captures/rm-indutores-hero.png",
+            alt: "Página inicial do site da RM Indutores",
           },
-          mobile: {
-            src: "/projects/rm-indutores-mobile.png",
-            alt: "Preview mobile do site da RM Indutores",
+          full: {
+            src: "/projects/case-captures/rm-indutores-full.png",
+            alt: "Página completa do site da RM Indutores",
           },
         },
       },
@@ -367,13 +367,9 @@ export const homeContent = {
         isPublic: true,
         href: "https://metalside.com.br/",
         preview: {
-          desktop: {
-            src: "/projects/metalside-desktop.png",
-            alt: "Preview desktop do site da Metalside",
-          },
-          mobile: {
-            src: "/projects/metalside-mobile.png",
-            alt: "Preview mobile do site da Metalside",
+          poster: {
+            src: "/projects/case-captures/metalside-hero.png",
+            alt: "Página inicial do site da Metalside",
           },
         },
       },
@@ -389,13 +385,9 @@ export const homeContent = {
         isPublic: true,
         href: "https://www.nsserv.net.br/",
         preview: {
-          desktop: {
-            src: "/projects/ns-servicos-desktop.png",
-            alt: "Preview desktop do site da NS Serviços",
-          },
-          mobile: {
-            src: "/projects/ns-servicos-mobile.png",
-            alt: "Preview mobile do site da NS Serviços",
+          poster: {
+            src: "/projects/case-captures/ns-servicos-hero.png",
+            alt: "Página inicial do site da NS Serviços",
           },
         },
       },
@@ -411,13 +403,13 @@ export const homeContent = {
         isPublic: true,
         href: "https://axisky.com.br/",
         preview: {
-          desktop: {
-            src: "/projects/axisky-desktop.png",
-            alt: "Preview desktop do site da Axisky Engenharia",
+          poster: {
+            src: "/projects/case-captures/axisky-hero.png",
+            alt: "Página inicial do site da Axisky Engenharia",
           },
-          mobile: {
-            src: "/projects/axisky-mobile.png",
-            alt: "Preview mobile do site da Axisky Engenharia",
+          full: {
+            src: "/projects/case-captures/axisky-full.png",
+            alt: "Página completa do site da Axisky Engenharia",
           },
         },
       },
@@ -433,13 +425,13 @@ export const homeContent = {
         isPublic: true,
         href: "https://focarforadacaixa.com.br/",
         preview: {
-          desktop: {
-            src: "/projects/focar-desktop.png",
-            alt: "Preview desktop do site da Focar Fora da Caixa",
+          poster: {
+            src: "/projects/case-captures/focar-hero.png",
+            alt: "Página inicial do site da Focar Fora da Caixa",
           },
-          mobile: {
-            src: "/projects/focar-mobile.png",
-            alt: "Preview mobile do site da Focar Fora da Caixa",
+          full: {
+            src: "/projects/case-captures/focar-full.png",
+            alt: "Página completa do site da Focar Fora da Caixa",
           },
         },
       },

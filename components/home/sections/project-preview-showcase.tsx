@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type PreviewAsset = {
   src: string;
@@ -8,8 +8,8 @@ type PreviewAsset = {
 };
 
 type ProjectPreviewShowcaseProps = {
-  desktop: PreviewAsset;
-  mobile?: PreviewAsset;
+  poster: PreviewAsset;
+  full?: PreviewAsset;
   title: string;
 };
 
@@ -23,19 +23,17 @@ function setScrollDistance(frame: HTMLDivElement | null, image: HTMLImageElement
 }
 
 export function ProjectPreviewShowcase({
-  desktop,
-  mobile,
+  poster,
+  full,
   title,
 }: ProjectPreviewShowcaseProps) {
   const desktopFrameRef = useRef<HTMLDivElement>(null);
-  const desktopImageRef = useRef<HTMLImageElement>(null);
-  const mobileFrameRef = useRef<HTMLDivElement>(null);
-  const mobileImageRef = useRef<HTMLImageElement>(null);
+  const fullImageRef = useRef<HTMLImageElement>(null);
+  const [isFullReady, setIsFullReady] = useState(false);
 
   useEffect(() => {
     const updateDistances = () => {
-      setScrollDistance(desktopFrameRef.current, desktopImageRef.current);
-      setScrollDistance(mobileFrameRef.current, mobileImageRef.current);
+      setScrollDistance(desktopFrameRef.current, fullImageRef.current);
     };
 
     updateDistances();
@@ -55,33 +53,31 @@ export function ProjectPreviewShowcase({
           <span />
           <i />
         </div>
-        <div className="project-preview-showcase__desktop-frame" ref={desktopFrameRef}>
+        <div
+          className={`project-preview-showcase__desktop-frame${isFullReady ? " is-full-ready" : ""}`}
+          ref={desktopFrameRef}
+        >
           <img
-            ref={desktopImageRef}
-            src={desktop.src}
-            alt={desktop.alt}
-            className="project-preview-showcase__image project-preview-showcase__image--desktop"
-            loading="lazy"
-            onLoad={() => setScrollDistance(desktopFrameRef.current, desktopImageRef.current)}
+            src={poster.src}
+            alt={poster.alt}
+            className="project-preview-showcase__image project-preview-showcase__image--poster"
+            loading="eager"
           />
+          {full ? (
+            <img
+              ref={fullImageRef}
+              src={full.src}
+              alt={full.alt}
+              className="project-preview-showcase__image project-preview-showcase__image--full"
+              loading="lazy"
+              onLoad={() => {
+                setScrollDistance(desktopFrameRef.current, fullImageRef.current);
+                setIsFullReady(true);
+              }}
+            />
+          ) : null}
         </div>
       </div>
-
-      {mobile ? (
-        <div className="project-preview-showcase__mobile-shell">
-          <div className="project-preview-showcase__mobile-speaker" aria-hidden="true" />
-          <div className="project-preview-showcase__mobile-frame" ref={mobileFrameRef}>
-            <img
-              ref={mobileImageRef}
-              src={mobile.src}
-              alt={mobile.alt}
-              className="project-preview-showcase__image project-preview-showcase__image--mobile"
-              loading="lazy"
-              onLoad={() => setScrollDistance(mobileFrameRef.current, mobileImageRef.current)}
-            />
-          </div>
-        </div>
-      ) : null}
     </div>
   );
 }
