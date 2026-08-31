@@ -1,0 +1,28 @@
+{
+  "primary": {
+    "family": "Geist Sans",
+    "roles": [
+      "titulos",
+      "texto",
+      "navegacao",
+      "interface",
+      "botoes"
+    ]
+  },
+  "secondary": {
+    "family": "Geist Mono",
+    "roles": [
+      "labels",
+      "dados pequenos",
+      "detalhes tecnicos",
+      "metadata"
+    ]
+  },
+  "sizes_px": {
+    "display_lg": 72,
+    "display_md": 52,
+    "title": 34,
+    "body": 28,
+    "meta": 18
+  }
+}

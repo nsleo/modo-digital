@@ -1,0 +1,31 @@
+{
+  "primitive": {
+    "graphite": "#0B0F14",
+    "deep_navy": "#071827",
+    "surface": "#121821",
+    "cyan": "#18C8FF",
+    "green": "#3EF28A",
+    "gold": "#D6A94E",
+    "ice": "#F5F7FA",
+    "white": "#FFFFFF"
+  },
+  "semantic": {
+    "background_primary": "#0B0F14",
+    "background_secondary": "#071827",
+    "surface_subtle": "rgba(255,255,255,0.02)",
+    "surface_strong": "rgba(7,24,39,0.72)",
+    "border_subtle": "rgba(255,255,255,0.08)",
+    "border_accent": "rgba(24,200,255,0.18)",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#8EA0B5",
+    "accent_primary": "#18C8FF",
+    "accent_support": "#3EF28A",
+    "premium_optional": "#D6A94E"
+  },
+  "rules": {
+    "primary_accent": "Use ciano tecnico como acento principal.",
+    "background": "Use grafite como fundo principal nas pecas sociais.",
+    "white_usage": "Branco e reservado para tipografia e logotipo.",
+    "gold_usage": "Ouro apenas para pecas institucionais premium; nao usar como cor principal do Instagram."
+  }
+}

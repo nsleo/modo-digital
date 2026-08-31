@@ -1,0 +1,200 @@
+{
+  "title": "Brand Kit",
+  "version": "v1.0",
+  "subtitle": "Identidade visual, regras de aplicação e ativos oficiais.",
+  "sourceFile": "Modo_Digital_Brand_Kit_PUBLICO_v1.0.docx",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "BRAND KIT PÚBLICO"
+    },
+    {
+      "type": "paragraph",
+      "text": "Identidade visual pública da Modo Digital"
+    },
+    {
+      "type": "paragraph",
+      "text": "Versão pública v1.0"
+    },
+    {
+      "type": "callout",
+      "label": "Uso público",
+      "text": "Este documento apresenta uma versão pública e prática do sistema visual da Modo Digital. Ele não substitui o Brand Kit interno, mas orienta aplicações externas, parceiros e páginas públicas do site."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "index": "1",
+      "text": "Assinatura da marca"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nome oficial: Modo Digital"
+    },
+    {
+      "type": "paragraph",
+      "text": "Descritor oficial: Estrutura Digital para Empresas"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "index": "2",
+      "text": "Conceito do símbolo"
+    },
+    {
+      "type": "paragraph",
+      "text": "O símbolo representa uma estrutura modular organizada ao redor de um núcleo central. Esse núcleo simboliza o negócio do cliente; os módulos ao redor representam as partes da estrutura digital que sustentam, conectam e acompanham esse negócio."
+    },
+    {
+      "type": "paragraph",
+      "text": "A marca não tenta explicar tudo no símbolo. Ela usa uma forma simples, memorável e aplicável para transmitir organização, sistema, continuidade e tecnologia."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "index": "3",
+      "text": "Versões principais"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Item",
+        "Uso público"
+      ],
+      "rows": [
+        [
+          "Símbolo isolado",
+          "Favicon, avatar, marca d’água, detalhe gráfico e aplicações reduzidas."
+        ],
+        [
+          "Lockup horizontal",
+          "Header do site, rodapé, assinaturas e usos funcionais."
+        ],
+        [
+          "Lockup vertical",
+          "Capas, aberturas, apresentações e peças institucionais."
+        ],
+        [
+          "Versão monocromática",
+          "Uso preferencial sempre que legibilidade e consistência forem prioridade."
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "index": "4",
+      "text": "Paleta pública"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Cor",
+        "HEX",
+        "Função",
+        "Uso"
+      ],
+      "rows": [
+        [
+          "Grafite",
+          "#0B0F14",
+          "Base dark-first",
+          "Fundos principais, hero, propostas."
+        ],
+        [
+          "Azul profundo",
+          "#071827",
+          "Profundidade e confiança",
+          "Fundos, gradientes, áreas premium."
+        ],
+        [
+          "Ciano técnico",
+          "#18C8FF",
+          "Tecnologia",
+          "Links, detalhes de interface, highlights."
+        ],
+        [
+          "Verde digital",
+          "#3EF28A",
+          "Status e funcionamento",
+          "Indicadores, sucesso, estabilidade."
+        ],
+        [
+          "Ouro premium",
+          "#D6A94E",
+          "Valor institucional",
+          "Detalhes premium e selos."
+        ],
+        [
+          "Ouro gradiente",
+          "#8A6324 → #F2E58A",
+          "Tratamento especial",
+          "Capas, hero, destaques de alto valor."
+        ],
+        [
+          "Branco gelo",
+          "#F5F7FA",
+          "Versão clara",
+          "Leitura, áreas de apoio e documentos."
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "index": "5",
+      "text": "Tipografia"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tipografia principal: Geist Sans. Usada em títulos, textos, navegação, botões e interface."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tipografia de apoio: Geist Mono. Usada em labels, pequenos dados, detalhes técnicos e elementos que precisem transmitir precisão."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "index": "6",
+      "text": "Direção visual"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Dark-first: a primeira impressão da marca deve ser premium, impactante e tecnológica.",
+        "Versão clara obrigatória: leitura, acessibilidade e materiais extensos devem ter opção clara.",
+        "Estrutura modular: cards, grids, blocos, camadas e interfaces devem reforçar a ideia de sistema.",
+        "Impacto controlado: glow, profundidade e ouro em gradiente podem ser usados, mas sempre com intenção.",
+        "Nada de excesso gratuito: a marca pode impressionar, mas nunca parecer genérica ou decorativa."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "index": "7",
+      "text": "Uso do ouro em gradiente"
+    },
+    {
+      "type": "paragraph",
+      "text": "O ouro em gradiente é um tratamento premium especial, não uma cor operacional. Ele deve ser usado em capas, hero, selos, aberturas e detalhes de valor. Não deve ser usado em texto corrido, formulários, botões comuns, links ou cards operacionais."
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "index": "8",
+      "text": "Regras rápidas"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Não alterar o símbolo oficial.",
+        "Não trocar a tipografia sem motivo estratégico.",
+        "Não usar muitas cores ao mesmo tempo.",
+        "Não transformar a marca em visual de agência genérica.",
+        "Não depender de efeito para esconder falta de composição.",
+        "Manter contraste, clareza e respiro visual."
+      ]
+    }
+  ]
+}

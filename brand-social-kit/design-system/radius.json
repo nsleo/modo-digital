@@ -1,0 +1,11 @@
+{
+  "sm": 20,
+  "md": 28,
+  "lg": 40,
+  "xl": 56,
+  "pill": 999,
+  "usage": {
+    "panels": "Use md e lg em superficies modulares.",
+    "avatars": "Use full bleed com composicao centralizada; nao arredondar manualmente para ocultar erro de respiro."
+  }
+}

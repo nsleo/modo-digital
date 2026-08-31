@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Avatar 1080 da Modo Digital</title>
+  <desc id="desc">Avatar 1080 da Modo Digital para o sistema social da Modo Digital.</desc>
+  <defs>
+  <pattern id="grid-48" width="48" height="48" patternUnits="userSpaceOnUse">
+  <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#FFFFFF" stroke-opacity="0.045" stroke-width="1"/>
+</pattern>
+  <pattern id="grid-32" width="32" height="32" patternUnits="userSpaceOnUse">
+  <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#18C8FF" stroke-opacity="0.055" stroke-width="1"/>
+</pattern>
+  <linearGradient id="fade-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#18C8FF" stop-opacity="0.12"/>
+    <stop offset="100%" stop-color="#18C8FF" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="edge-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#18C8FF" stop-opacity="0"/>
+    <stop offset="50%" stop-color="#18C8FF" stop-opacity="0.42"/>
+    <stop offset="100%" stop-color="#18C8FF" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+  <rect width="1080" height="1080" fill="#0B0F14"/>
+  
+      <circle cx="540" cy="540" r="423.36" fill="none" stroke="#18C8FF" stroke-opacity="0.14" stroke-width="4.32" />
+      <svg x="329.4" y="329.4" width="421.2" height="414.0396" viewBox="0 0 56.58 55.6" opacity="1">
+<g id="VETOR">
+    <path fill="#18C8FF" d="M35.33,46.79v-3.32l-16.59-.04c-4.07,0-6.38-3.16-6.38-6.95v-15.23h-4.86C3.25,21.24-.04,25.56,0,29.87v14.97c0,2.92.94,5.77,3.02,7.82,1.87,1.85,4.42,2.95,7.1,2.94h17.11c3.97.07,8.11-4.39,8.11-8.81Z"/>
+    <path fill="#18C8FF" d="M21.25,8.81v3.32s22.97.06,22.97.06c.03,0,0,6.93,0,6.93v15.23h4.86c4.25,0,7.55-4.32,7.5-8.63v-14.97c0-2.92-.94-5.77-3.02-7.82C51.69,1.09,49.14-.01,46.46,0h-17.11c-3.97-.07-8.11,4.39-8.11,8.81Z"/>
+    <path fill="#18C8FF" d="M35.33,34.36v-13.09l-14.08-.02v6.63c0,3.79,2.52,6.48,5.92,6.48h8.16Z"/>
+  </g>
+</svg>
+    
+</svg>

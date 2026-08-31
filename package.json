@@ -1,0 +1,34 @@
+{
+  "name": "modo-digital",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:static": "./scripts/build-static-site.sh",
+    "build:brand-social-kit": "./scripts/run-node.sh scripts/build-brand-social-kit.mjs",
+    "lint": "eslint app components content scripts next.config.ts eslint.config.mjs",
+    "publish:public-docs": "./scripts/run-python-docs.sh scripts/publish-public-docs.py",
+    "publish:site": "./scripts/publish-site.sh",
+    "preview": "node scripts/serve-static.mjs",
+    "test:list-leads": "./scripts/test-list-leads-endpoint.sh",
+    "test:lead-details": "./scripts/test-lead-details-endpoint.sh",
+    "test:update-lead-stage": "./scripts/test-update-lead-stage-endpoint.sh",
+    "test:convert-lead": "./scripts/test-convert-lead-endpoint.sh",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "motion": "12.42.0",
+    "next": "16.2.9",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.2.9",
+    "typescript": "^5.9.0"
+  }
+}

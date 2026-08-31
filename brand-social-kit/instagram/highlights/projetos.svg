@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Capa de destaque Projetos</title>
+  <desc id="desc">Capa de destaque Projetos para o sistema social da Modo Digital.</desc>
+  <defs>
+  <pattern id="grid-48" width="48" height="48" patternUnits="userSpaceOnUse">
+  <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#FFFFFF" stroke-opacity="0.045" stroke-width="1"/>
+</pattern>
+  <pattern id="grid-32" width="32" height="32" patternUnits="userSpaceOnUse">
+  <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#18C8FF" stroke-opacity="0.055" stroke-width="1"/>
+</pattern>
+  <linearGradient id="fade-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#18C8FF" stop-opacity="0.12"/>
+    <stop offset="100%" stop-color="#18C8FF" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="edge-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#18C8FF" stop-opacity="0"/>
+    <stop offset="50%" stop-color="#18C8FF" stop-opacity="0.42"/>
+    <stop offset="100%" stop-color="#18C8FF" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+  <rect width="1080" height="1080" fill="#0B0F14"/>
+  
+      <rect x="64" y="64" width="952" height="952" rx="240" fill="#071827" fill-opacity="0.08" />
+      <circle cx="540" cy="540" r="374" fill="none" stroke="#18C8FF" stroke-width="18" />
+      <circle cx="540" cy="540" r="336" fill="none" stroke="#18C8FF" stroke-opacity="0.12" stroke-width="3" />
+      <svg x="404" y="404" width="272" height="272" viewBox="0 0 24 24" fill="none" stroke="#18C8FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" /><path d="M8 10v4" /><path d="M12 10v2" /><path d="M16 10v6" />
+</svg>
+    
+</svg>

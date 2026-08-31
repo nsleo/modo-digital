@@ -1,0 +1,18 @@
+{
+  "base_unit": 8,
+  "scale_px": {
+    "xs": 16,
+    "sm": 24,
+    "md": 40,
+    "lg": 64,
+    "xl": 96,
+    "xxl": 144
+  },
+  "safe_areas": {
+    "instagram_profile_padding_ratio": 0.285,
+    "instagram_highlight_padding_px": 154,
+    "instagram_story_padding_px": 80,
+    "linkedin_banner_padding_px": 88,
+    "whatsapp_banner_padding_px": 64
+  }
+}

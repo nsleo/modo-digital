@@ -1,0 +1,18 @@
+{
+  "official_sources": [
+    "Modo_Digital_symbol_v2_cyan.svg",
+    "Modo_Digital_symbol_v2_white.svg",
+    "Modo_Digital_symbol_v2_black.svg",
+    "Modo_Digital_logo_horizontal_v2_outline_white.svg",
+    "Modo_Digital_logo_horizontal_v2_outline_black.svg",
+    "Modo_Digital_logo_vertical_v2_outline_white.svg",
+    "Modo_Digital_logo_vertical_v2_outline_gold_gradient.svg"
+  ],
+  "generated_from": "scripts/build-brand-social-kit.mjs",
+  "rules": [
+    "Nao redesenhar o simbolo oficial.",
+    "Nao criar variacoes fora da paleta publica.",
+    "Usar apenas Lucide para icones dos destaques.",
+    "Ouro reservado para aplicacoes institucionais premium."
+  ]
+}

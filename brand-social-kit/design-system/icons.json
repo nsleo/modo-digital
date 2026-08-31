@@ -1,0 +1,61 @@
+{
+  "library": "Lucide",
+  "defaults": {
+    "stroke_width": 1.75,
+    "stroke": "#18C8FF",
+    "background": "#0B0F14",
+    "frame": "Circulo fino em ciano para capas de destaque."
+  },
+  "highlights": [
+    {
+      "slug": "sobre",
+      "label": "Sobre",
+      "icon": "BadgeInfo"
+    },
+    {
+      "slug": "servicos",
+      "label": "Serviços",
+      "icon": "Blocks"
+    },
+    {
+      "slug": "projetos",
+      "label": "Projetos",
+      "icon": "FolderKanban"
+    },
+    {
+      "slug": "sites",
+      "label": "Sites",
+      "icon": "MonitorSmartphone"
+    },
+    {
+      "slug": "portfolio",
+      "label": "Portfólio",
+      "icon": "LayoutGrid"
+    },
+    {
+      "slug": "hospedagem",
+      "label": "Hospedagem",
+      "icon": "ServerCog"
+    },
+    {
+      "slug": "faq",
+      "label": "FAQ",
+      "icon": "CircleHelp"
+    },
+    {
+      "slug": "insights",
+      "label": "Insights",
+      "icon": "Lightbulb"
+    },
+    {
+      "slug": "bastidores",
+      "label": "Bastidores",
+      "icon": "Workflow"
+    },
+    {
+      "slug": "contato",
+      "label": "Contato",
+      "icon": "MessageSquareMore"
+    }
+  ]
+}
