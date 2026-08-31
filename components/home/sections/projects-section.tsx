@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Icon } from "@/components/ui/icon";
+import { ProjectPreviewShowcase } from "@/components/home/sections/project-preview-showcase";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionShell } from "@/components/ui/section-shell";
@@ -34,11 +35,10 @@ export function ProjectsSection() {
               <article className="projects-case-card">
                 <div className="projects-case-card__media">
                   {item.preview ? (
-                    <img
-                      src={item.preview.src}
-                      alt={item.preview.alt}
-                      className="projects-case-card__image"
-                      loading="lazy"
+                    <ProjectPreviewShowcase
+                      desktop={item.preview.desktop}
+                      mobile={item.preview.mobile}
+                      title={item.title}
                     />
                   ) : (
                     <div className="projects-case-card__fallback" aria-hidden="true">

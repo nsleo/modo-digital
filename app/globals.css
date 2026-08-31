@@ -2270,8 +2270,8 @@
 
   .projects-case-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
     margin-top: 4rem;
   }
 
@@ -2283,7 +2283,7 @@
     display: grid;
     gap: 1rem;
     height: 100%;
-    min-height: 24rem;
+    min-height: 35rem;
     padding: 1.5rem;
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
@@ -2303,13 +2303,14 @@
 
   .projects-case-card__media {
     position: relative;
-    min-height: 12.5rem;
+    min-height: 22rem;
     margin: -1.5rem -1.5rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     overflow: hidden;
     background:
-      radial-gradient(circle at top left, rgba(24, 200, 255, 0.18), transparent 52%),
-      linear-gradient(180deg, rgba(8, 17, 33, 0.96), rgba(8, 12, 20, 0.92));
+      radial-gradient(circle at top left, rgba(24, 200, 255, 0.22), transparent 46%),
+      radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.1), transparent 38%),
+      linear-gradient(180deg, rgba(8, 17, 33, 0.98), rgba(8, 12, 20, 0.92));
   }
 
   .projects-case-card__media::after {
@@ -2321,11 +2322,118 @@
     pointer-events: none;
   }
 
-  .projects-case-card__image {
-    width: 100%;
+  .project-preview-showcase {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     height: 100%;
-    object-fit: cover;
-    object-position: top center;
+    padding: 1.4rem 1.25rem 1rem;
+  }
+
+  .project-preview-showcase__desktop-shell {
+    position: relative;
+    width: min(100%, 34rem);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1.35rem;
+    background: rgba(8, 13, 24, 0.92);
+    box-shadow:
+      0 30px 80px rgba(0, 0, 0, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+  }
+
+  .project-preview-showcase__browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(180deg, rgba(20, 28, 44, 0.96), rgba(12, 18, 30, 0.92));
+  }
+
+  .project-preview-showcase__browser-bar span {
+    width: 0.62rem;
+    height: 0.62rem;
+    border-radius: 999px;
+    background: rgba(171, 185, 205, 0.3);
+  }
+
+  .project-preview-showcase__browser-bar i {
+    flex: 1;
+    height: 0.75rem;
+    margin-left: 0.5rem;
+    border-radius: 999px;
+    background: rgba(171, 185, 205, 0.08);
+  }
+
+  .project-preview-showcase__desktop-frame,
+  .project-preview-showcase__mobile-frame {
+    --preview-scroll-distance: 0px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-preview-showcase__desktop-frame {
+    aspect-ratio: 16 / 10;
+    background: #0a0f18;
+  }
+
+  .project-preview-showcase__mobile-shell {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: clamp(5.2rem, 16%, 6.4rem);
+    padding: 0.45rem;
+    border-radius: 1.55rem;
+    background: linear-gradient(180deg, rgba(9, 13, 22, 0.98), rgba(3, 5, 11, 0.98));
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .project-preview-showcase__mobile-speaker {
+    width: 34%;
+    height: 0.28rem;
+    margin: 0 auto 0.45rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .project-preview-showcase__mobile-frame {
+    aspect-ratio: 9 / 19.5;
+    border-radius: 1.05rem;
+    background: #0a0f18;
+  }
+
+  .project-preview-showcase__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    animation-name: project-preview-pan;
+    animation-duration: 16s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    will-change: transform;
+  }
+
+  .project-preview-showcase__image--mobile {
+    animation-duration: 18s;
+    animation-delay: 1.2s;
+  }
+
+  @keyframes project-preview-pan {
+    0%,
+    14% {
+      transform: translateY(0);
+    }
+
+    86%,
+    100% {
+      transform: translateY(calc(var(--preview-scroll-distance) * -1));
+    }
   }
 
   .projects-case-card__fallback {
@@ -2355,7 +2463,7 @@
   }
 
   .projects-case-card h3 {
-    max-width: 16ch;
+    max-width: 18ch;
     font-size: 1.25rem;
     font-weight: 540;
   }
@@ -4148,6 +4256,16 @@
       grid-template-columns: 1fr;
     }
 
+    .project-preview-showcase {
+      padding: 1rem 1rem 0.8rem;
+    }
+
+    .project-preview-showcase__mobile-shell {
+      right: 0.7rem;
+      bottom: 0.7rem;
+      width: clamp(4.8rem, 18vw, 5.8rem);
+    }
+
     .projects-preview__copy {
       padding: 1rem;
     }
@@ -4429,6 +4547,28 @@
       padding: 0.75rem;
     }
 
+    .projects-case-card {
+      min-height: 32rem;
+    }
+
+    .projects-case-card__media {
+      min-height: 18rem;
+    }
+
+    .project-preview-showcase__desktop-shell {
+      width: 100%;
+    }
+
+    .project-preview-showcase__mobile-shell {
+      width: 4.85rem;
+      padding: 0.38rem;
+      border-radius: 1.3rem;
+    }
+
+    .project-preview-showcase__mobile-frame {
+      border-radius: 0.9rem;
+    }
+
     .browser-content {
       min-height: 16rem;
       padding: 2.5rem 1.5rem 1.5rem;
@@ -4462,6 +4602,11 @@
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
+    }
+
+    .project-preview-showcase__image {
+      animation: none;
+      transform: translateY(0);
     }
 
     *,
