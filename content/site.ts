@@ -350,7 +350,7 @@ export const homeContent = {
         summary:
           "Presença institucional para estruturas metálicas e portas de enrolar, usando registros reais de obra, serviços claros e CTA direto para atendimento.",
         impact:
-          "Saiu da aparência de serralheria genérica para uma presença mais autoral, técnica e confiável para obras, empresas e cliente final.",
+          "Organiza a apresentação da empresa com mais clareza, presença técnica e confiança para obras, empresas e cliente final.",
         tags: ["Site institucional", "Serviço local", "Obras", "Mídia real"],
         isPublic: true,
         href: "https://metalside.com.br/",

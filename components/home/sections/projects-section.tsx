@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Icon } from "@/components/ui/icon";
 import { Reveal } from "@/components/ui/reveal";
@@ -35,12 +34,11 @@ export function ProjectsSection() {
               <article className="projects-case-card">
                 <div className="projects-case-card__media">
                   {item.preview ? (
-                    <Image
+                    <img
                       src={item.preview.src}
                       alt={item.preview.alt}
-                      fill
                       className="projects-case-card__image"
-                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      loading="lazy"
                     />
                   ) : (
                     <div className="projects-case-card__fallback" aria-hidden="true">
