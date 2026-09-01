@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { MockFrame } from "react-mockframe";
 import type { ProjectPreviewDevice } from "@/content/site";
 
 type DeviceKind = "desktop" | "tablet" | "mobile";
@@ -43,47 +44,55 @@ function DevicePreview({ kind, preview, isActive }: DevicePreviewProps) {
 
   const isShowingFull = isActive && isFullReady;
 
+  const screen = (
+    <div
+      className={`project-preview-showcase__frame${isShowingFull ? " is-full-ready" : ""}`}
+      ref={frameRef}
+    >
+      <img
+        src={preview.hero.src}
+        alt={preview.hero.alt}
+        className="project-preview-showcase__image project-preview-showcase__image--poster"
+        loading="lazy"
+      />
+      {isActive ? (
+        <img
+          ref={fullImageRef}
+          src={preview.full.src}
+          alt={preview.full.alt}
+          className="project-preview-showcase__image project-preview-showcase__image--full"
+          loading="eager"
+          onLoad={() => {
+            setScrollDistance(frameRef.current, fullImageRef.current);
+            setIsFullReady(true);
+          }}
+        />
+      ) : null}
+      {isActive && !isFullReady ? (
+        <span className="project-preview-showcase__loading" aria-live="polite">
+          Carregando
+        </span>
+      ) : null}
+    </div>
+  );
+
   return (
     <div className={`project-preview-showcase__device project-preview-showcase__device--${kind}`}>
       {kind === "desktop" ? (
-        <div className="project-preview-showcase__browser-bar" aria-hidden="true">
-          <span />
-          <span />
-          <span />
-          <i />
-        </div>
-      ) : (
-        <div className="project-preview-showcase__device-notch" aria-hidden="true" />
-      )}
-      <div
-        className={`project-preview-showcase__frame${isShowingFull ? " is-full-ready" : ""}`}
-        ref={frameRef}
-      >
-        <img
-          src={preview.hero.src}
-          alt={preview.hero.alt}
-          className="project-preview-showcase__image project-preview-showcase__image--poster"
-          loading="lazy"
-        />
-        {isActive ? (
-          <img
-            ref={fullImageRef}
-            src={preview.full.src}
-            alt={preview.full.alt}
-            className="project-preview-showcase__image project-preview-showcase__image--full"
-            loading="eager"
-            onLoad={() => {
-              setScrollDistance(frameRef.current, fullImageRef.current);
-              setIsFullReady(true);
-            }}
-          />
-        ) : null}
-        {isActive && !isFullReady ? (
-          <span className="project-preview-showcase__loading" aria-live="polite">
-            Carregando
-          </span>
-        ) : null}
-      </div>
+        <MockFrame device="MacBook Pro" color="space-gray" className="project-preview-showcase__mockframe">
+          {screen}
+        </MockFrame>
+      ) : null}
+      {kind === "tablet" ? (
+        <MockFrame device="iPad Pro" color="space-gray" className="project-preview-showcase__mockframe">
+          {screen}
+        </MockFrame>
+      ) : null}
+      {kind === "mobile" ? (
+        <MockFrame device="iPhone 17" color="black" className="project-preview-showcase__mockframe">
+          {screen}
+        </MockFrame>
+      ) : null}
     </div>
   );
 }

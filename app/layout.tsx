@@ -5,6 +5,9 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { CursorHalo } from "@/components/ui/cursor-halo";
 import { ScrollToTopButton } from "@/components/ui/scroll-to-top";
 import { siteConfig } from "@/content/site";
+import "react-mockframe/styles/mockframe-iphones.css";
+import "react-mockframe/styles/mockframe-laptops.css";
+import "react-mockframe/styles/mockframe-tablets.css";
 import "./globals.css";
 
 export const metadata: Metadata = {

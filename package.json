@@ -21,7 +21,8 @@
     "motion": "12.42.0",
     "next": "16.2.9",
     "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react-dom": "19.2.7",
+    "react-mockframe": "^1.1.0"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
